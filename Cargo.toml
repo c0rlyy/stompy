@@ -1,0 +1,21 @@
+[package]
+name = "stompy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+tokio = { version = "1.40", features = ["full"] }
+tokio-executor-trait = "2.1"
+tokio-reactor-trait = "1.1.0"
+axum = { version = "0.7", features = ["macros", "ws"] }
+axum-extra = { version = "0.9", features = ["typed-header"] }
+futures = "0.3"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+headers = "0.4"
+tower = { version = "0.5.1", features = ["util"] }
+tower-http = { version = "0.5", features = ["trace"] }
+tokio-tungstenite = "0.24"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+lapin = { version = "2.5"}  # Specify the Tokio feature for lapin
